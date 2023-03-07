@@ -14,6 +14,10 @@ app.use((req, res, next) => {
 
 app.use(bodyParser.json());
 
+app.get('/', (req, res) => {
+    res.send('Hello world');
+});
+
 app.post('/', (req, res) => {
     const km = parseFloat(req.body.km);
     const price = km * 0.15;
