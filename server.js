@@ -18,8 +18,8 @@ app.post('/', (req, res) => {
     const km = parseFloat(req.body.km);
     const price = km * 0.15;
     res.send({ price });
-})
+});
 
 app.listen(port, () => {
-    console.log(`Example app listening on port ${port}`)
-})
+    console.log(`Example app listening on port ${port}`);
+});
