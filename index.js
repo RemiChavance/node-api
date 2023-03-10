@@ -18,8 +18,8 @@ app.get('/', (req, res) => {
     res.send('Hello world');
 });
 
-app.post('/', (req, res) => {
-    const km = parseFloat(req.body.km);
+app.get('/:km', (req, res) => {
+    const km = parseFloat(req.params.km);
     const price = km * 0.15;
     res.send({ price });
 });
